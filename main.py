@@ -1,7 +1,5 @@
 import sqlite3
-#from bs4 import BeautifulSoup
 import os
-#import Image
 
 
 from flask import Flask, redirect, render_template, request
@@ -24,30 +22,6 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-	#with sqlite3.connect('moves.db') as conn:
-		#cursor = conn.cursor()
-		#cursor.execute("CREATE TABLE search (id INTEGER, Name varchar(200), alias varchar(200))")
-		#cursor.execute("DROP TABLE sequence_storage")
-		#cursor.execute("DELETE FROM cat_tags WHERE cat_tag='Dancer Wraps'")
-		#cursor.execute("ALTER TABLE moves ADD Tags varchar(400)")
-		
-		#cursor.execute("CREATE TABLE cat_tags (\n C_id INTEGER, \n cat_tag varchar(200), \n PRIMARY KEY(C_id), \n UNIQUE(cat_tag))")		
-		
-	#cursor.execute("CREATE TABLE moves (\n id INTEGER ,\n Name varchar(200) NOT NULL, \n Category varchar(200) NOT NULL, \n Description varchar(200) NOT NULL, \n Level INTEGER NOT NULL, \n Invert varchar(5), \n Image varchar(200), \n PRIMARY KEY(id), UNIQUE(Name))")
-	#cursor.execute("CREATE TABLE entries (\n E_id INTEGER ,\n E_Name varchar(200), \n E_Category varchar(200), \n E_Description varchar(200), \n E_Level INTEGER, \n E_Invert varchar(5), \n E_Image varchar(200), \n base_move varchar(200), \n PRIMARY KEY(E_id), UNIQUE(E_Name, base_move))")
-		
-	#cursor.execute("CREATE TABLE sequences (\n S_id INTEGER ,\n S_Name varchar(200), \n S_Move varchar(200), \n Move_Order INTEGER, \n PRIMARY KEY(S_id), \n CONSTRAINT unq_S_Name_Move_Order, \n UNIQUE(S_Name, Move_Order))")
-			
-	#cursor.execute("CREATE TABLE sequence_storage (\n S_id INTEGER ,\n S_Name varchar(200), \n S_Video varchar(200), \n PRIMARY KEY(S_id), UNIQUE(S_Name))")
-		
-	#cursor.execute("CREATE TABLE move_alias (\n m_name varchar(200),\n alias varchar(200), UNIQUE(m_name, alias))")
-			#cursor.execute("ALTER TABLE sequences RENAME COLUMN id TO S_id")
-	
-			
-	
-	
-
-	
 	if request.method == "POST": 
 		
 		if request.form["Form_Type"] == "Move":		
